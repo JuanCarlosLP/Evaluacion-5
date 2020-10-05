@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluacion 5</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-body">
+                <form onsubmit="event.preventDefault(), submitCar()" action="/cars">
+                    <div class="form-group">
+                        <label for="name">Marca</label>
+                        <input type="text" class="form-control" id="brand" placeholder="Ingresar Marca">
+                    </div>
+                    <div class="form-group">
+                        <label for="model">Modelo</label>
+                        <input type="text" class="form-control" id="model" placeholder="Ingresar Modelo">
+                    </div>
+                    <div class="form-group">
+                        <label for="color">Color</label>
+                        <input type="text" class="form-control" id="color" placeholder="Ingresar Color">
+                    </div>
+                    <div class="form-group">
+                        <label for="year">Año</label>
+                        <input type="number" class="form-control" id="year" placeholder="Ingresar Año">
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Precio</label>
+                        <input type="number" class="form-control" id="price" placeholder="Ingresar Precio">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Color</th>
+                    <th>Año</th>
+                    <th>Precio</th>
+                </tr>
+            </thead>
+            <tbody id="users-table-body">
+                <!--Aquí van mis filas -->
+            </tbody>
+        </table>
+    </div>
+    <script src="./cars.js"></script>
+</body>
+
+</html>
